@@ -1,0 +1,205 @@
+﻿body {
+    background-color: whitesmoke;
+    font-family: Bahnschrift;
+    font-weight: lighter;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 500px;
+}
+
+
+
+body header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 10px 0;
+    background-color: white;
+    box-shadow: 0px 1px 35px -7px rgba(0, 0, 0, 0.5);
+}
+body header .buttons {
+
+    display: flex;
+    justify-content: center;
+}
+body header > .logo {
+    font-family: Arial Black;
+    color: #2787f5;
+    font-size: 30px;
+    margin: 0 30px 0 50px;
+    position: absolute;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+}
+body header .buttons > a {
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 7px;
+    text-decoration: none;
+    color: black;
+}
+body header .buttons > a:hover {
+    background-color: #2787f52c;
+    transition: .3s cubic-bezier(0, .4, 0, 1);
+}
+body header .buttons > a.selected {
+    background-color: #2787f5;
+    color: white;
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.5) inset;
+}
+@media screen and (max-width: 800px) {
+    .logo {
+        display: none;
+    }
+}
+
+
+body .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body .container .allNews {
+    height: 100%;
+    margin: 0 30%;
+    min-width: 300px;
+}
+
+body .container .allNews .newsBox {
+    background-color: white;
+    padding: 25px 20px;
+    box-shadow: 0px 1px 20px -5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+body .container .allNews .newsBox a {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+body .container .allNews .newsBox a:hover {
+    color: #2787f5;
+    transition: .3s cubic-bezier(0, .4, 0 ,1);
+}
+body .container .allNews .newsBox h1 {
+    margin-top: 0;
+}
+body .container .allNews .newsBox p {
+    margin: 0;
+    font-size: 17px;
+}
+body .container .allNews .newsBox hr {
+    outline: none;
+    border: none;
+    height: 1px;
+    background-color: #2787f5;
+    margin: 15px 0;
+}
+body .container .allNews .newsBox .date {
+    font-weight: lighter;
+    margin: 0;
+    margin-top: 10px;
+}
+
+body .container .allNews .newsBox .buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+body .container .allNews .newsBox .buttons a {
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    transition: .3s cubic-bezier(0, .4, 0 ,1);
+}
+body .container .allNews .newsBox .buttons a.editBut:hover {
+    background-color: #2787f5;
+    color: white;
+}
+body .container .allNews .newsBox .buttons a.delBut:hover {
+    background-color: #b10707;
+    color: white;
+}
+
+
+body .container .editingForm {
+    height: 100%;
+    margin: 30px 30% 0;
+    min-width: 500px;
+}
+body .container .editingForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body .container .editingForm form label {
+    font-size: 17px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+body .container .editingForm form label > div {
+    text-align: right;
+    margin-top: 17px;
+}
+body .container .editingForm form input, textarea {
+    outline: none;
+    height: 25px;
+    width: 97%;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    
+    border-radius: 7px;
+    border: 2px solid whitesmoke;
+    box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.5) inset;
+    font-family: Bahnschrift;
+    font-size: 18px;
+}
+body .container .editingForm form input:focus, textarea:focus {
+    border: 2px solid #2787f5;
+    transition: .3s cubic-bezier(.5, 0, 0, 1);
+}
+body .container .editingForm form textarea {
+    height: 150px;
+}
+body .container .editingForm form input[type="submit"] {
+    height: 35px;
+    width: 100%;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.3);
+    transition: .3s cubic-bezier(0, .4, 0, 1);
+    border: 0;
+}
+body .container .editingForm form input[type="submit"]:hover {
+    background-color: #2787f5;
+    color: white;
+}
+
+a.submitBut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 35px;
+    width: 100%;
+    background-color: whitesmoke;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.3);
+    transition: .3s cubic-bezier(0, .4, 0, 1);
+    border: 0;
+    border-radius: 7px;
+
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+a.submitBut:hover {
+    background-color: #2787f5;
+    color: white;
+}

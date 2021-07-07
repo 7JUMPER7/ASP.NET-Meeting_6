@@ -1,0 +1,15 @@
+﻿@using Meeting_6.Models
+@model News
+@{
+    ViewBag.Title = "OneNews";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="allNews">
+    <div class="newsBox">
+        <h1>@Model.Title</h1>
+        <hr />
+        <p>@Model.Description</p>
+        <h6 class="date">@Model.Date.ToShortDateString()</h6>
+    </div>
+</div>

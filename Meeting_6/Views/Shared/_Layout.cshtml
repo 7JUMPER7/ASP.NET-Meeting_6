@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <header>
+        @Html.ActionLink("NEWS", "Index", null, new { @class = "logo" })
+        <div class="buttons">
+            @switch (HttpContext.Current.Request.RequestContext.RouteData.Values["action"])
+            {
+                case "Index":
+                    {
+                        @Html.ActionLink("Главная", "Index", null, new { @class = "selected" })
+                        @Html.ActionLink("Блог", "Index")
+                        @Html.ActionLink("Редактирование", "Editing")
+                        @Html.ActionLink("Контакты", "Index")
+                        break;
+                    }
+                case "Editing":
+                    {
+                        @Html.ActionLink("Главная", "Index")
+                        @Html.ActionLink("Блог", "Index")
+                        @Html.ActionLink("Редактирование", "Editing", null, new { @class = "selected" })
+                        @Html.ActionLink("Контакты", "Index")
+                        break;
+                    }
+                default:
+                    {
+                        @Html.ActionLink("Главная", "Index")
+                        @Html.ActionLink("Блог", "Index")
+                        @Html.ActionLink("Редактирование", "Editing")
+                        @Html.ActionLink("Контакты", "Index")
+                        break;
+                    }
+            }
+        </div>
+    </header>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="editingForm">
+    <form method="post" name="newNews">
+        <label>
+            <div>Id:</div>
+            <input type="text" name="Id"/>
+        </label>
+        <label>
+            <div>Название:</div>
+            <input type="text" name="Title">
+        </label>
+        <label>
+            <div>Описание:</div>
+            <textarea name="Description"></textarea>
+        </label>
+        <label>
+            <div>Дата:</div>
+            <input type="date" name="Date">
+        </label>
+        <input type="submit" value="Сохранить">
+    </form>
+</div>

@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="editingForm">
+    <form method="post" name="oldNews">
+        <label>
+            <div>Id:</div>
+            <input type="text" name="Id" value="@ViewBag.news.Id" readonly/>
+        </label>
+        <label>
+            <div>Название:</div>
+            <input type="text" name="Title" value="@ViewBag.news.Title">
+        </label>
+        <label>
+            <div>Описание:</div>
+            <textarea name="Description">@ViewBag.news.Description</textarea>
+        </label>
+        <label>
+            <div>Дата:</div>
+            <input type="date" name="Date" value="@ViewBag.news.Date.ToString("yyyy-MM-dd")">
+        </label>
+        <input type="submit" value="Сохранить">
+    </form>
+</div>

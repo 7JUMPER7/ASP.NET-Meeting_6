@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="../Meeting_6/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">NEWS</a>
+        <div class="buttons">
+            <a class="selected">Главная</a>
+            <a>Блог</a>
+            <a>Редактирование</a>
+            <a>Контакты</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- <div class="allNews">
+            <div class="newsBox">
+                <a>Биткоин продолжает плавать в диапазоне от 32 до 38 тыс. долларов.</a>
+                <hr>
+                <p>В ночь на понедельник курс биткоина достигал отметки в $35,9 тыс., после чего начал снижаться. По
+                    состоянию на 20:10 мск цена первой криптовалюты составляет $33,6 тыс., за прошедшие сутки она упала на
+                    5%.
+                    Биткоин продолжает сохранять тенденцию на снижение, следующие уровни $27 тыс. и $23 тыс., уверен CEO
+                    Xena Financial Systems Антон Кравченко. По его словам, скорость снижения значительно замедлилась и рынок
+                    ждет точку разворота, однако пока неизвестно на каком уровне это произойдет.
+                </p>
+                <h6 class="date">23.06.2021</h6>
+                <hr>
+                <div class="buttons">
+                    <a href="#" class="editBut">Редактировать</a>
+                    <a href="#" class="delBut">Удалить</a>
+                </div>
+            </div>
+            <div class="newsBox">
+                <a>Новая Tesla Model S Plaid начала поставляться.</a>
+                <hr>
+                <p>По данным Tesla, благодаря трехмоторной электрической силовой установке мощностью 1200 лошадиных сил
+                    Model S Plaid разгоняется до 60 миль в час (97 км/ч) меньше чем за две секунды. Дальность хода без
+                    подзарядки составляет 390 миль (628 км), а максимальная скорость достигает 200 миль в час (322 км/ч).
+                    Однако для того, чтобы разгоняться до такой скорости, на машину необходимо установить специальные колеса
+                    и шины, которые поступят в продажу не раньше осени, говорится на сайте компании.
+                </p>
+            </div>
+            <div class="newsBox">
+                <a>Илон Маск в очередной раз пошутил.</a>
+                <hr>
+                <p>Основатель компании SpaceX Илон Маск после вопроса о реакции «Роскосмоса» на запуск Crew Dragon к МКС,
+                    пошутил про «работающий батут». Директор NASA Джеймс Брайденстайн сообщил, что еще не говорил с главой
+                    Федерального космического агентства Дмитрием Рогозиным, но видел видеообращение представителя
+                    «Роскосмоса».
+                </p>
+            </div>
+        </div> -->
+
+        <div class="editingForm">
+            <form method="post" action="edit">
+                <label>
+                    <div>Название:</div>
+                    <input type="text" name="Title">
+                </label>
+                <label>
+                    <div>Описание:</div>
+                    <textarea name="Description"></textarea>
+                </label>
+                <label>
+                    <div>Дата:</div>
+                    <input type="date" name="Date">
+                </label>
+                <input type="submit" value="Сохранить">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+﻿@using Meeting_6.Models
+@model IEnumerable<News>
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="allNews">
+    @foreach (News item in Model)
+    {
+        <div class="newsBox">
+            @Html.ActionLink(item.Title, "OneNews", new { id = item.Id })
+            <hr />
+            @if (item.Description.Length > 150)
+            {
+                <p>@item.Description.Substring(0, 150)...</p>
+            }
+            else
+            {
+                <p>@item.Description</p>
+            }
+            <h6 class="date">@item.Date.ToShortDateString()</h6>
+        </div>
+    }
+</div>
